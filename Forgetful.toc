@@ -1,5 +1,5 @@
 ## Interface: 50200
-## Title: Forgetful
+## Title: Forgetful_Spec
 ## Notes: For the forgetful
 ## Version: 0.5.2b
 ## SavedVariablesPerCharacter: FG_Set1 FG_Set2 FG_Enabled FG_DD1 FG_DD2 FG_Config FG_DailyQuests_Done FG_Config.Equipment
