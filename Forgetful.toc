@@ -1,0 +1,11 @@
+## Interface: 50200
+## Title: Forgetful
+## Notes: For the forgetful
+## Version: 0.5.2b
+## SavedVariablesPerCharacter: FG_Set1 FG_Set2 FG_Enabled FG_DD1 FG_DD2 FG_Config FG_DailyQuests_Done FG_Config.Equipment
+## SavedVariables: FG_DailyQuests  FG_DailyReset
+Forgetful.lua
+Forgetful.xml
+
+
+
