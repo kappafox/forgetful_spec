@@ -1,8 +1,6 @@
 --[[
 	Author: kappafox
-		Date: 2/1/11
-		Modified: 15/4/13
-		Purpose: For the forgetful
+
 --]]
 
 -- Global/public variables to initialise saving
