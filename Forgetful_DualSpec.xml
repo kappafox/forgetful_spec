@@ -1,0 +1,105 @@
+<Ui xmlns="http://www.blizzard.com/wow/ui/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xsi:schemaLocation="http://www.blizzard.com/wow/ui/ ..\FrameXML\UI.xsd">
+ 
+ 
+ <Script File="Forgetful_DualSpec.lua"/>
+  <Frame name="Forgetful_DS_Frame">
+   <Scripts>
+    <OnLoad>
+		FGDS.OnLoad(self);
+    </OnLoad>
+	<OnEvent>
+		FGDS.OnEvent(self, event, ...);
+	</OnEvent>
+   </Scripts>
+  </Frame>
+  
+  
+  <Frame name="Forgetful_DS_Main" movable="true" parent="UIParent" toplevel="true" frameStrata="DIALOG" hidden="true" enableMouse="true" inherits="ButtonFrameTemplate">
+	<Anchors><Anchor point="CENTER"/></Anchors>
+	<Size x="400" y="250"/>
+
+	<Anchors>
+		<Anchor point="TOPLEFT" x="100" y="-84"/>
+	</Anchors>
+	
+	 <Scripts>
+		  <OnLoad>self:RegisterForDrag("LeftButton");</OnLoad>
+		  <OnDragStart>self:StartMoving();</OnDragStart>
+		  <OnDragStop>self:StopMovingOrSizing();</OnDragStop>
+	</Scripts>
+
+	<Frames>
+	
+		<Button name="$parentButtonClose" inherits="OptionsButtonTemplate" text="Close">
+			<Anchors>
+				<Anchor point="BOTTOMRIGHT">
+					<Offset><AbsDimension x="-10" y="5"/></Offset>
+				</Anchor>
+			</Anchors>
+			<Scripts>
+				<OnClick> Forgetful_DS_Main:Hide(); </OnClick>
+			</Scripts>
+		</Button>
+
+	</Frames>
+	
+	<Layers>
+		<Layer>
+			<FontString name="$parentFontString" font="GameFontNormal" text="Gear set to use with spec 1:" justifyH="LEFT" justifyV="TOP">
+			 <!-- <Color r="1" g="0.8" b="1" a="1"/>-->
+			  <FontHeight val="14"/>
+			  <Anchors>
+			   <Anchor point="TOPLEFT" relativeTo="$parent" x="20" y="-80" />
+			  </Anchors>
+			  <Shadow>
+				<Offset x="1" y="1" />
+				<Color r="0" g="0" b="0"/>
+			  </Shadow>
+			</FontString>		
+		</Layer>
+		
+		<Layer>
+			<FontString name="$parentFontString2" font="GameFontNormal" text="Gear set to use with spec 2:" justifyH="LEFT" justifyV="TOP">
+			  <FontHeight val="14"/>
+			  <Anchors>
+			   <Anchor point="TOPLEFT" relativeTo="$parent" x="20" y="-160" />
+			  </Anchors>
+			  <Shadow>
+				<Offset x="1" y="1" />
+				<Color r="0" g="0" b="0"/>
+			  </Shadow>
+			</FontString>		
+		</Layer>
+		
+		<Layer>
+			<Texture name="$parent_Spec1_Icon" file="Interface\ItemSocketingFrame\UI-ItemSockets" alphaMode="ADD">
+				<Size>
+					<AbsDimension x="45" y="45"/>
+				</Size>
+				<Anchors>
+					<Anchor point="TOPRIGHT">
+						<Offset>
+							<AbsDimension x="-20" y="-70"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+			</Texture>		
+		</Layer>
+
+		<Layer>
+			<Texture name="$parent_Spec2_Icon" file="Interface\ItemSocketingFrame\UI-ItemSockets" alphaMode="ADD">
+				<Size>
+					<AbsDimension x="45" y="45"/>
+				</Size>
+				<Anchors>
+					<Anchor point="TOPRIGHT">
+						<Offset>
+							<AbsDimension x="-20" y="-150"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+			</Texture>		
+		</Layer>
+	</Layers>
+  </Frame>
+</Ui> 

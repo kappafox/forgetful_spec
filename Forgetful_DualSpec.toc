@@ -1,0 +1,9 @@
+## Interface: 50400
+## Title: Forgetful_DualSpec
+## Notes: Automatic gear changing when spec is changed.
+## Version: 1.0.5
+## SavedVariablesPerCharacter: FG_Set1 FG_Set2 FG_Enabled FG_DD1 FG_DD2 FG_DS_SETHELMS FG_DS_HH1 FG_DS_HH2
+Forgetful_DualSpec.lua
+Forgetful_DualSpec.xml
+
+
